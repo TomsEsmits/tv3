@@ -1,0 +1,14 @@
+.header {
+    background: $black;
+    display: flex;
+
+    &__content-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__heading--white {
+        color: $base;
+    }
+}

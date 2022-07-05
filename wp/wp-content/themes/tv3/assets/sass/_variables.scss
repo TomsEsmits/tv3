@@ -1,0 +1,38 @@
+// Theme colors
+$black: #1A1A1C;
+$base: #F2F2F2;
+$light-grey: #C4C4C4;
+$red: #FF0000;
+$white: #ffffff;
+$film-grey: #333338;
+
+// Fonts
+$font-family-roboto: 'Roboto', sans-serif;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+
+// Typography
+$font-size-xsmall: 12px;
+$font-size-body-small: 13px;
+$font-size-body-medium: 14px;
+$font-size-body-normal: 15px;
+$font-size-body: 20px;
+
+// Line heights
+$line-height-xsmall: 100%;
+$line-height-small: 120%;
+$line-height-normal: 140%;
+$line-height-medium: 150%;
+$line-height-large: 160%;
+
+// Grid
+$grid: 980px;
+$gutter: 15px;
+$mobile-gutter: 10px;
+
+// Breakpoints
+$grid-breakpoints: (
+  sm: 576px,
+  md: 768px,
+) !default;

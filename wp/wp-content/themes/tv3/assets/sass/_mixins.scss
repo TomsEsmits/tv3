@@ -1,0 +1,55 @@
+// Typography
+@mixin h1 {
+	font-family: $font-family-roboto;
+	font-weight: $font-weight-light;
+    line-height: $line-height-small;
+	margin: 0;
+
+    @include media-breakpoint-down( md ) {
+		font-size: 26px;
+	}
+
+    @include media-breakpoint-up( md ) {
+		font-size: 32px;
+	}
+}
+
+@mixin h2 {
+	font-family: $font-family-roboto;
+	font-weight: $font-weight-medium;
+    line-height: $line-height-normal;
+	margin: 0;
+
+    @include media-breakpoint-down( md ) {
+		font-size: 20px;
+	}
+
+    @include media-breakpoint-up( md ){
+		font-size: 28px;
+	}
+}
+
+// Media queries
+@mixin media-breakpoint-up($breakpoint) { 
+	@if map-has-key($grid-breakpoints, $breakpoint) {
+		@media (min-width: #{map-get($grid-breakpoints, $breakpoint)+1}) {
+			@content;
+		}
+	}
+	@else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+			+ "Please make sure it is defined in `$breakpoints` map.";
+	}
+}
+
+@mixin media-breakpoint-down($breakpoint) { 
+	@if map-has-key($grid-breakpoints, $breakpoint) {
+		@media (max-width: #{map-get($grid-breakpoints, $breakpoint)}) {
+			@content;
+		}
+	}
+	@else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+			+ "Please make sure it is defined in `$breakpoints` map.";
+	}
+}

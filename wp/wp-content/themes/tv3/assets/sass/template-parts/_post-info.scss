@@ -1,0 +1,24 @@
+.post-info {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    height: 26px;
+    min-width: 66px;
+    max-width: 99px;
+    width: 100%;
+    background: $white;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    &__icon {
+        font-size: $font-size-xsmall;
+    }
+
+    &__info-value {
+        font-weight: $font-weight-normal;
+        font-size: $font-size-xsmall;
+        line-height: $line-height-medium;
+    }
+}
